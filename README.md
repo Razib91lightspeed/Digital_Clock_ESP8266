@@ -117,7 +117,9 @@ files:
 - ESP8266 Arduino core: **ESP8266 Community**
 
 ---
-
+## 📊 Output
+![Project Photo 1](clock.jpeg)
+![Project Photo 2](message.jpeg)
 ## 🪪 License
 
 This project is provided as-is for personal/educational use.
