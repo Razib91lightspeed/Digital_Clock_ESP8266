@@ -1,0 +1,64 @@
+# -----------------------
+# OS-generated files
+# -----------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+# -----------------------
+# Editor / IDE
+# -----------------------
+.vscode/
+.idea/
+*.code-workspace
+*.sublime-*
+*.swp
+*.swo
+*~
+
+# -----------------------
+# Arduino / ESP8266 build artifacts
+# -----------------------
+arduino_build_*/
+arduino_cache_*/
+build/
+cmake-build-*/
+*.bin
+*.elf
+*.hex
+*.eep
+*.map
+*.lst
+*.lss
+*.sym
+*.dSYM/
+
+# -----------------------
+# PlatformIO (if used)
+# -----------------------
+.pio/
+.pioenvs/
+.piolibdeps/
+.platformio/
+
+# -----------------------
+# Logs / temp
+# -----------------------
+*.log
+*.tmp
+*.bak
+
+# -----------------------
+# Secrets & keys (create these locally; do not commit)
+# -----------------------
+secrets.h
+wifi_secrets.h
+config_private.h
+*.pem
+*.key
+*.crt
+.env
