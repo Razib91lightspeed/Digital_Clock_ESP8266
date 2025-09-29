@@ -1,7 +1,7 @@
 # ESP8266 OLED Clock (Digital + Analog)
 
-A tiny Wi-Fi clock for **ESP8266** with a **0.96" I²C OLED** (SSD1306).  
-Shows a header line (“Hei, Razib”), a **large digital time** (HH:MM:SS), and a **round analog clock**.  
+A tiny Wi-Fi clock for **ESP8266** with a **0.96" I²C OLED** (SSD1306).
+Shows a header line (“Hei, Razib”), a **large digital time** (HH:MM:SS), and a **round analog clock**.
 Time is synced from NTP and updated every second.
 
 ---
@@ -29,7 +29,7 @@ Upload and watch the OLED.
 
 ## 🧩 Customization
 
-**Header text & size**  
+**Header text & size**
 In `digitalClockFrame`:
 
     d->setFont(ArialMT_Plain_16);
@@ -51,7 +51,7 @@ In `digitalClockFrame`:
 
 Use **0x3D** if your module is solder-jumpered to the alternate I²C address.
 
-**Display type (SH1106 vs SSD1306)**  
+**Display type (SH1106 vs SSD1306)**
 If your onboard OLED is **SH1106**, switch library include and class:
 
     #include "SH1106Wire.h"
@@ -100,9 +100,13 @@ With this approach, **remove `NTPClient` and related calls**.
 
 ## 🗂️ Project Structure (suggested)
 
-esp8266-oled-clock/
-├─ esp8266_oled_clock.ino # main sketch (digital + analog frames)
-├─ README.md # this file
+project: esp8266-oled-clock
+files:
+  - name: esp8266_oled_clock.ino
+    description: main sketch (digital + analog frames)
+  - name: README.md
+    description: project readme
+
 
 ---
 
@@ -116,5 +120,5 @@ esp8266-oled-clock/
 
 ## 🪪 License
 
-This project is provided as-is for personal/educational use.  
+This project is provided as-is for personal/educational use.
 You may adapt and redistribute; please credit the libraries above.
