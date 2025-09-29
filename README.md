@@ -6,47 +6,36 @@ Time is synced from NTP and updated every second.
 
 ---
 ## Setup
-setup:
-  device: "NodeMCU ESP8266 with 0.96\" OLED Display"
 
-  arduino_ide:
-    additional_board_manager_urls:
-      - "https://arduino.esp8266.com/stable/package_esp8266com_index.json"
-    steps:
-      - open: "Arduino IDE → Preferences (Settings)"
-      - action: "Paste the URL above into 'Additional Boards Manager URLs'"
-      - action: "Click OK"
+**Device:** NodeMCU ESP8266 with 0.96" OLED Display
 
-  boards_manager:
-    path: "Tools → Board → Boards Manager…"
-    install:
-      name: "ESP8266 by ESP8266 Community"
-      version: "latest"
+### Arduino IDE (Boards URL)
+1. Open **Arduino IDE → Preferences…**
+2. In **Additional Boards Manager URLs**, paste:
+ ```bash
+  http://arduino.esp8266.com/stable/package_esp8266com_index.json
+   ```
+3. Click **OK**.
 
-  libraries:
-    manage_path: "Sketch → Include Library → Manage Libraries…"
-    install:
-      - name: "ESP8266 and ESP32 OLED driver for SSD1306 displays"
-        author: "ThingPulse"
-      - name: "U8g2"
-        author: "olikraus"
-      - name: "Adafruit GFX Library"
-        author: "Adafruit"
-      - name: "Adafruit SSD1306"
-        author: "Adafruit"
-      - name: "TimeLib"
-        author: "Paul Stoffregen"
+### Boards Manager
+- Go to **Tools → Board → Boards Manager…**
+- Search **ESP8266 by ESP8266 Community** and **Install** (latest).
 
-first_code:
-  description: "Open a ready-made example to verify the OLED and library setup."
-  example_path: "File → Examples → ESP8266 and ESP32 OLED driver for SSD1306 displays → SSD1306ClockDemo"
+### Libraries
+Open **Sketch → Include Library → Manage Libraries…**, then install:
+- **ESP8266 and ESP32 OLED driver for SSD1306 displays** — ThingPulse
+- **U8g2** — olikraus
+- **Adafruit GFX Library** — Adafruit
+- **Adafruit SSD1306** — Adafruit
+- **TimeLib** — Paul Stoffregen
 
-notes:
-  - "Use a 2.4 GHz Wi-Fi network; ESP8266 does not support 5 GHz."
-  - "If 'Port' is greyed out, install the USB-UART driver (CH340 or CP210x) and use a data-capable USB cable."
-  - "Typical I²C wiring: SDA=D2 (GPIO4), SCL=D1 (GPIO5), OLED address 0x3C (change to 0x3D if jumpered)."
+### First Code to Try
+- **File → Examples → ESP8266 and ESP32 OLED driver for SSD1306 displays → SSD1306ClockDemo**
 
-
+### Notes
+- Use a **2.4 GHz** Wi-Fi network (ESP8266 doesn’t support 5 GHz).
+- If **Tools → Port** is greyed out, install the **CH340** or **CP210x** USB-UART driver and use a **data-capable** USB cable.
+- Typical I²C wiring: **SDA = D2 (GPIO4)**, **SCL = D1 (GPIO5)**, OLED address **0x3C** (change to **0x3D** if the module’s jumper is set).
 
 ## Timezone
 
