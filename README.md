@@ -10,7 +10,7 @@ Time is synced from NTP and updated every second.
 **Device:** NodeMCU ESP8266 with 0.96" OLED Display
 
 ### Arduino IDE (Boards URL)
-1. Open **Arduino IDE → Preferences…**
+1. Open **Arduino IDE → Setting…**
 2. In **Additional Boards Manager URLs**, paste:
  ```bash
   http://arduino.esp8266.com/stable/package_esp8266com_index.json
