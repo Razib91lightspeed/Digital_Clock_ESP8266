@@ -1,5 +1,4 @@
-// const char* ssid     = "I'm_watching_u";   // <-- change to your SSID
-//const char* password = "Sylvia2021";  
+ 
 
 #include <ESP8266WiFi.h>
 #include <WiFiUdp.h>
@@ -9,8 +8,8 @@
 #include "OLEDDisplayUi.h"
 
 // ===== WiFi (fill these) =====
-const char* ssid     = "I'm_watching_u"; 
-const char* password = "Sylvia2021"; 
+const char* ssid     = "WIFI NAME"; 
+const char* password = "WIFI PASS"; 
 
 // ===== NTP (UTC+3 for Finland summer time) =====
 WiFiUDP ntpUDP;
