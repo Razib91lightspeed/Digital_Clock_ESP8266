@@ -5,6 +5,48 @@ Shows a header line (“Hei, Razib”), a **large digital time** (HH:MM:SS), and
 Time is synced from NTP and updated every second.
 
 ---
+## Setup
+setup:
+  device: "NodeMCU ESP8266 with 0.96\" OLED Display"
+
+  arduino_ide:
+    additional_board_manager_urls:
+      - "https://arduino.esp8266.com/stable/package_esp8266com_index.json"
+    steps:
+      - open: "Arduino IDE → Preferences (Settings)"
+      - action: "Paste the URL above into 'Additional Boards Manager URLs'"
+      - action: "Click OK"
+
+  boards_manager:
+    path: "Tools → Board → Boards Manager…"
+    install:
+      name: "ESP8266 by ESP8266 Community"
+      version: "latest"
+
+  libraries:
+    manage_path: "Sketch → Include Library → Manage Libraries…"
+    install:
+      - name: "ESP8266 and ESP32 OLED driver for SSD1306 displays"
+        author: "ThingPulse"
+      - name: "U8g2"
+        author: "olikraus"
+      - name: "Adafruit GFX Library"
+        author: "Adafruit"
+      - name: "Adafruit SSD1306"
+        author: "Adafruit"
+      - name: "TimeLib"
+        author: "Paul Stoffregen"
+
+first_code:
+  description: "Open a ready-made example to verify the OLED and library setup."
+  example_path: "File → Examples → ESP8266 and ESP32 OLED driver for SSD1306 displays → SSD1306ClockDemo"
+
+notes:
+  - "Use a 2.4 GHz Wi-Fi network; ESP8266 does not support 5 GHz."
+  - "If 'Port' is greyed out, install the USB-UART driver (CH340 or CP210x) and use a data-capable USB cable."
+  - "Typical I²C wiring: SDA=D2 (GPIO4), SCL=D1 (GPIO5), OLED address 0x3C (change to 0x3D if jumpered)."
+
+
 
 ## Timezone
 
